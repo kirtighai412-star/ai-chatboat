@@ -1,6 +1,6 @@
 # AI-Powered Browser Chatbot 🤖
 
-A browser-based AI chatbot built with HTML, CSS and vanilla JavaScript. Your messages go to the Anthropic API through a small serverless function, and the reply appears in the chat in real time.
+A browser-based AI chatbot built with HTML, CSS and vanilla JavaScript. Your messages go to the Google Gemini API through a small serverless function, and the reply appears in the chat in real time.
 
 <!-- Add a screenshot of the chat here:
 ![Chatbot screenshot](screenshots/chat.png)
@@ -27,7 +27,7 @@ A browser-based AI chatbot built with HTML, CSS and vanilla JavaScript. Your mes
 | Structure and styling | HTML, CSS |
 | Front-end logic | Vanilla JavaScript (fetch, async/await, DOM updates) |
 | Back end | Netlify Functions (Node.js) |
-| AI | Anthropic API |
+| AI | Google Gemini API |
 | Hosting | Netlify, code on GitHub |
 
 ## 📁 Project Structure
@@ -37,7 +37,7 @@ ai-chatbot/
 ├── index.html                 # page layout
 ├── style.css                  # styling
 ├── script.js                  # chat logic in the browser
-├── netlify/functions/chat.js  # server function that calls the Anthropic API
+├── netlify/functions/chat.js  # server function that calls the Gemini API
 ├── netlify.toml               # Netlify settings
 ├── .env.example               # example of the environment variables
 └── .gitignore                 # keeps secrets out of GitHub
@@ -45,7 +45,7 @@ ai-chatbot/
 
 ## 📦 Run Locally
 
-You need [Node.js](https://nodejs.org/) and an [Anthropic API key](https://console.anthropic.com/).
+You need [Node.js](https://nodejs.org/) and a free [Gemini API key](https://aistudio.google.com/apikey) from Google AI Studio.
 
 ```bash
 git clone https://github.com/kirtighai412-star/ai-chatbot.git
@@ -69,15 +69,15 @@ Open the address shown in the terminal (usually `http://localhost:8888`).
 1. Push this project to a GitHub repository.
 2. On [Netlify](https://app.netlify.com/), choose **Add new site**, then **Import an existing project**, and pick your repo.
 3. Leave the build command empty. Netlify reads `netlify.toml` for the rest.
-4. Go to **Site configuration**, then **Environment variables**, and add `ANTHROPIC_API_KEY` with your key.
+4. Go to **Site configuration**, then **Environment variables**, and add `GEMINI_API_KEY` with your key.
 5. Deploy the site again so the key is picked up.
 
 ## 🔐 API Key Safety
 
 - The key lives only in Netlify's environment variables or your local `.env` file.
 - `.env` is listed in `.gitignore`, so it is never uploaded to GitHub.
-- If a key is ever shared by mistake, delete it in your Anthropic account and create a new one.
-- Set a monthly spend limit on your Anthropic account, because anyone with your site link can send messages.
+- If a key is ever shared by mistake, delete it in Google AI Studio and create a new one.
+- The free tier has rate limits, so many messages in a short time may get a "try again" message. Anyone with your site link can send messages, so keep an eye on your usage in Google AI Studio.
 
 ## 👩‍💻 Author
 

@@ -1,5 +1,5 @@
 // The browser never sees the API key.
-// Messages go to a Netlify Function, which calls the Anthropic API.
+// Messages go to a Netlify Function, which calls the Gemini API.
 const ENDPOINT = "/.netlify/functions/chat";
 const MAX_HISTORY = 20;
 
