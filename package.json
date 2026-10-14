@@ -1,0 +1,9 @@
+{
+  "name": "ai-chatbot",
+  "version": "1.0.0",
+  "description": "A browser-based AI chatbot built with HTML, CSS and JavaScript, powered by the Anthropic API.",
+  "scripts": {
+    "dev": "netlify dev"
+  },
+  "license": "MIT"
+}
